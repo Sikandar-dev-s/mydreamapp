@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Flask Portfolio</title>
-    <link rel="stylesheet" href="/static/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Flask Portfolio</title>
+  <!-- Bootstrap CSS CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
 </head>
-<body>
-    <h1>Welcome to My DevOps Portfolio</h1>
-    <p>This Flask app is deployed on AWS EC2!</p>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">DevOps Portfolio</a>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div class="text-center">
+      <h1>Welcome to My DevOps Portfolio</h1>
+      <p class="lead">This Flask app is deployed on AWS EC2!</p>
+      <a href="#" class="btn btn-primary btn-lg">Explore Projects</a>
+    </div>
+  </main>
+
+  <form method="POST" action="/contact" class="mx-auto" style="max-width: 400px;">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="name"
+      placeholder="Enter your name"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="name@example.com"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="message" class="form-label">Message</label>
+    <textarea
+      class="form-control"
+      id="message"
+      name="message"
+      rows="3"
+      required
+    ></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
