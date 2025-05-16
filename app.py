@@ -19,5 +19,22 @@ def contact():
     flash("Thank you for reaching out! We will get back to you soon.")
     return redirect(url_for("home"))
 
+@app.route("/projects")
+def projects():
+    project_list = [
+        {
+            "title": "Flask App on AWS EC2",
+            "description": "A portfolio web app hosted on EC2 with Git integration.",
+            "link": "https://github.com/Sikandar-dev-s/mydreamapp"
+        },
+        {
+            "title": "Terraform AWS Provisioning",
+            "description": "Provision EC2 and S3 buckets using IaC principles.",
+            "link": "https://github.com/your-repo/terraform-aws"
+        }
+    ]
+    return render_template("projects.html", projects=project_list)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
